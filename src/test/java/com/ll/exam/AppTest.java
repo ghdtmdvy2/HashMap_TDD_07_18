@@ -65,6 +65,16 @@ class HashMapTest {
         ages.remove("철수");
         assertEquals(0, ages.size());
     }
+    @Test
+    void keySet() {
+        HashMap<String, Integer> ages = new HashMap<>();
+        ages.put("철수", 22);
+        ages.put("영희", 25);
+
+        List<String> keySet = ages.keySet();
+        assertEquals("철수", keySet.get(0));
+        assertEquals("영희", keySet.get(1));
+    }
 }
 
 class 사람 {
